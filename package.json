@@ -1,0 +1,24 @@
+{
+  "name": "first-node-project",
+  "version": "1.0.0",
+  "description": "node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jj77847/first-node-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jj77847/first-node-project/issues"
+  },
+  "homepage": "https://github.com/jj77847/first-node-project#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
