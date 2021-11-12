@@ -1,2 +1,1 @@
-# first-node-project
-node
+# professional readme generator
