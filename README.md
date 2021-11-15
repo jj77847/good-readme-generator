@@ -1,2 +1,0 @@
-# first-node-project
-node
