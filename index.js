@@ -1,4 +1,4 @@
-const fs = inquirer("fs");
+// const fs = inquirer("fs");
 
 // declare questions
 const questions = [
@@ -40,6 +40,8 @@ const questions = [
   },
 ];
 
+// console.log(questions);
+
 const generateTitle = (answers) => {
   return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
 };
@@ -58,7 +60,7 @@ const generateTableOfContents = (answers) => {
 const generateDescription = (answers) => {
   return `## Description
 
-//   ${answers.description}`;
+  ${answers.description}`;
 };
 
 const generateInstallation = (answers) => {
