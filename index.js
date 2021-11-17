@@ -1,4 +1,4 @@
-const fs = require("fs");
+const fs = inquirer("fs");
 
 // declare questions
 const questions = [
@@ -153,5 +153,5 @@ const init = async () => {
 init();
 
 // this works - node index.js
-// console.log("Hi Jonny, Keep Going!");
+console.log("Hi Jonny, Keep Going!");
 // this works - npm run start NOT Working?
