@@ -10,6 +10,7 @@
   - [Tests](#tests)
   - [Contributing](#contributing)
   - [License](#license)
+  - [Questions](#questions)
 
 ## Description
 
@@ -44,3 +45,11 @@ ADD TEXT HERE
 ## License
 
 ADD TEXT HERE
+
+## Questions
+
+If you have any questions please contact me at:
+
+[Email] (jonathanjefferies1985@gmail.com)
+
+[Github Username] (jj77847)

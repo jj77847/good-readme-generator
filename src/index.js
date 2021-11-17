@@ -1,4 +1,6 @@
-const fs = inquirer("fs");
+const inquirer = require("inquirer");
+
+const fs = require("fs");
 
 // declare questions
 const questions = [
@@ -43,7 +45,7 @@ const questions = [
 // console.log(questions);
 
 const generateTitle = (answers) => {
-  return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+  return `# ${answers.title} ![${answers.license}](https://img.shields.io/static/v1?label=${answers.license}&message=License&color=green)`;
 };
 
 const generateTableOfContents = (answers) => {
@@ -143,13 +145,14 @@ const writeToFile = (filePath, data) => {
 
 const init = async () => {
   // prompt the questions using inquirer
+  const answers = await inquirer.prompt(questions);
   // generate readme based on answers
-  const readme = generateReadme();
+  const readme = generateReadme(answers);
 
   console.log(readme);
 
   // write generated readme to a file
-  writeToFile("GENERATED_README.md", generateReadme);
+  writeToFile("GENERATED_README.md", readme);
 };
 
 init();
