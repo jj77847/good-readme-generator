@@ -18,19 +18,22 @@ const generateTableOfContents = (answers) => {
   - [License](#license)`;
 };
 
+// generate description
 const generateDescription = (answers) => {
   return `## Description
   
-  ADD TEXT HERE`;
+  ${answers.description};
 };
 
+// generate installation steps, if confirmed
 const generateInstallation = (answers) => {
-  return `## Installation
+  if (answers.installation) {
+    return `## Installation
   
   Run the following script to install the packages required for the application:
   
   \`\`\`
-  ADD TEXT HERE
+$answers.{insallationSteps}
   \`\`\``;
 };
 
