@@ -1,4 +1,3 @@
-const inquirer = require("inquirer");
 const fs = require("fs");
 
 // declare questions
@@ -41,61 +40,13 @@ const questions = [
   },
 ];
 
-const questionsInstallationRequirements = [
-  {
-    type: "confirm",
-    name: "installation",
-    message: "Are there any installation requirements?",
-  },
-];
-
-const questionsInstallationCode = [
-  {
-    type: "input",
-    name: "installationCode",
-    message: "Type your installation code directly below:",
-  },
-];
-
-const questionsFurtherInstallationRequirements = [
-  {
-    type: "confirm",
-    name: "furtherInstallation",
-    message: "Are there any further installation requirements?",
-  },
-];
-
-const questionsUsageRequirements = [
-  {
-    type: "confirm",
-    name: "usage",
-    message: "Are there any usage information?",
-  },
-];
-
-const questionsUsageInfo = [
-  {
-    type: "input",
-    name: "usageInfo",
-    message: "Type your usage information below:",
-  },
-];
-
-const questionsFurtherUsageInfo = [
-  {
-    type: "confirm",
-    name: "furtherUsage",
-    message: "Are there any further usage information?",
-  },
-];
-
 const generateTitle = (answers) => {
   return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
 };
 
 const generateTableOfContents = (answers) => {
   return `## Table of Contents
-  
+
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -104,76 +55,74 @@ const generateTableOfContents = (answers) => {
   - [License](#license)`;
 };
 
-// generate description
 const generateDescription = (answers) => {
   return `## Description
-  
+
   ${answers.description}`;
 };
 
-// generate installation steps, if confirmed
 const generateInstallation = (answers) => {
   if (answers.installation) {
     return `## Installation
-  
+
   Run the following script to install the packages required for the application:
-  
+
   \`\`\`
-  $answers.{installation}
+  ${answers.installationSteps}
   \`\`\`
-  `;
+    `;
   } else {
     return ``;
   }
 };
 
-function generateUsage(answers) {
+const generateUsage = (answers) => {
   return `## Usage
-  
+
   To use the application run the following script:
-  
+
   \`\`\`
-  ADD TEXT HERE
+  ${answers.usage}
   \`\`\``;
-}
+};
 
 const generateTests = (answers) => {
   return `## Tests
-  
+
   To use the application run the following script:
-  
+
   \`\`\`
-  ADD TEXT HERE
+  ${answers.Tests}
   \`\`\``;
 };
 
 const generateContributing = (answers) => {
   return `## Contributing
-  
-  ADD TEXT HERE`;
+
+  ${answers.contributing}`;
 };
 
 const generateLicense = (answers) => {
   return `## License
-  
-  ADD TEXT HERE`;
+
+  ${answers.license}`;
 };
 
 const generateReadme = (answers) => {
   return `${generateTitle(answers)}
 
   ${generateTableOfContents(answers)}
-  
+
   ${generateDescription(answers)}
-  
+
   ${generateInstallation(answers)}
-  
+
   ${generateUsage(answers)}
-  
+
   ${generateTests(answers)}
-  
+
   ${generateContributing(answers)}
-  
+
   ${generateLicense(answers)}
   `;
 };
@@ -188,8 +137,6 @@ const writeToFile = (filePath, data) => {
 
 const init = async () => {
   // prompt the questions using inquirer
-  const data = await inquirerData();
-
   // generate readme based on answers
   const readme = generateReadme();
 
@@ -198,3 +145,5 @@ const init = async () => {
 };
 
 init();
+
+// console.log("hi jonny!");
