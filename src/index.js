@@ -86,7 +86,8 @@ const questionsFurtherUsageInfo = [
     type: "confirm",
     name: "furtherUsage",
     message: "Are there any further usage information?",
-  },];
+  },
+];
 
 const generateTitle = (answers) => {
   return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
@@ -107,7 +108,7 @@ const generateTableOfContents = (answers) => {
 const generateDescription = (answers) => {
   return `## Description
   
-  ${answers.description};
+  ${answers.description}`;
 };
 
 // generate installation steps, if confirmed
@@ -118,11 +119,15 @@ const generateInstallation = (answers) => {
   Run the following script to install the packages required for the application:
   
   \`\`\`
-$answers.{insallationSteps}
-  \`\`\``;
+  $answers.{installation}
+  \`\`\`
+  `;
+  } else {
+    return ``;
+  }
 };
 
-const generateUsage = (answers) => {
+function generateUsage(answers) {
   return `## Usage
   
   To use the application run the following script:
@@ -130,7 +135,7 @@ const generateUsage = (answers) => {
   \`\`\`
   ADD TEXT HERE
   \`\`\``;
-};
+}
 
 const generateTests = (answers) => {
   return `## Tests
@@ -184,12 +189,12 @@ const writeToFile = (filePath, data) => {
 const init = async () => {
   // prompt the questions using inquirer
   const data = await inquirerData();
-  
+
   // generate readme based on answers
   const readme = generateReadme();
 
   // write generated readme to a file
-  writeToFile('GENERATED_README.md', readme);
+  writeToFile("GENERATED_README.md", readme);
 };
 
 init();
