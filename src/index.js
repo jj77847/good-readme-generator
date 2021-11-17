@@ -131,7 +131,7 @@ const generateReadme = (answers) => {
   `;
 };
 
-// const writeToFile = (filePath, data) => {
+const writeToFile = (filePath, data) => {
   try {
     fs.writeFileSync(filePath, data);
   } catch (error) {
