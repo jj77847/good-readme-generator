@@ -1,4 +1,4 @@
-// const fs = inquirer("fs");
+const fs = inquirer("fs");
 
 // declare questions
 const questions = [
