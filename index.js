@@ -114,7 +114,7 @@ const generateReadme = (answers) => {
   ${generateTableOfContents(answers)}
 
   ${generateDescription(answers)}
-  
+
   ${generateTableOfContents(answers)}
 
   ${generateDescription(answers)}
@@ -151,3 +151,7 @@ const init = async () => {
 };
 
 init();
+
+// this works - node index.js
+// console.log("Hi Jonny, Keep Going!");
+// this works - npm run start NOT Working?
