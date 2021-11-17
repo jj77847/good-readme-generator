@@ -146,4 +146,4 @@ const init = async () => {
 
 init();
 
-// console.log("hi jonny!");
+console.log("hi jonny!");
