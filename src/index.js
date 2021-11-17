@@ -68,7 +68,7 @@ const generateInstallation = (answers) => {
   Run the following script to install the packages required for the application:
 
   \`\`\`
-  ${answers.installationSteps}
+  ${answers.installation}
   \`\`\`
     `;
   } else {
@@ -110,57 +110,11 @@ const generateLicense = (answers) => {
 
 const generateReadme = (answers) => {
   return `${generateTitle(answers)}
+
+  ${generateTableOfContents(answers)}
+
+  ${generateDescription(answers)}
   
-  # TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
-
-  ## Table of Contents
-
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)
-
-  ## Description
-
-  ADD TEXT HERE
-
-  ## Installation
-
-  Run the following script to install the packages required for the application:
-
-  ```
-  ADD TEXT HERE
-  ```
-
-  ## Usage
-
-  To use the application run the following script:
-
-  ```
-  ADD TEXT HERE
-  ```
-
-  ## Tests
-
-  To use the application run the following script:
-
-  ```
-  ADD TEXT HERE
-  ```
-
-  ## Contributing
-
-  ADD TEXT HERE
-
-  ## License
-
-  ADD TEXT HERE
-  
-  
-  
-
   ${generateTableOfContents(answers)}
 
   ${generateDescription(answers)}
@@ -177,7 +131,7 @@ const generateReadme = (answers) => {
   `;
 };
 
-const writeToFile = (filePath, data) => {
+// const writeToFile = (filePath, data) => {
   try {
     fs.writeFileSync(filePath, data);
   } catch (error) {
@@ -190,10 +144,10 @@ const init = async () => {
   // generate readme based on answers
   const readme = generateReadme();
 
+  console.log(readme);
+
   // write generated readme to a file
   writeToFile("GENERATED_README.md", readme);
 };
 
 init();
-
-console.log("hi jonny!");
