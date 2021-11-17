@@ -1,7 +1,93 @@
-const fs = require('fs');
+const inquirer = require("inquirer");
+const fs = require("fs");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // declare questions
-const questions = [];
+const questions = [
+  {
+    type: "input",
+    name: "title",
+    message: "What is the title of your project?",
+  },
+  {
+    type: "list",
+    choices: ["MIT", "None"],
+    name: "license",
+    message: "Select a license for your project",
+  },
+  {
+    type: "input",
+    name: "description",
+    message: "What is the project's description?",
+  },
+  {
+    type: "input",
+    name: "contributing",
+    message: "How can people contribute to the project?",
+  },
+  {
+    type: "input",
+    name: "tests",
+    message: "Are there any tests for this project?",
+  },
+  {
+    type: "input",
+    name: "gitHub",
+    message: "What is your gitHub username?",
+  },
+  {
+    type: "input",
+    name: "email",
+    message: "What is your e-mail address?",
+  },
+];
+
+const questionsInstallationRequirements = [
+  {
+    type: "confirm",
+    name: "installation",
+    message: "Are there any installation requirements?",
+  },
+];
+
+const questionsInstallationCode = [
+  {
+    type: "input",
+    name: "installationCode",
+    message: "Type your installation code directly below:",
+  },
+];
+
+const questionsFurtherInstallationRequirements = [
+  {
+    type: "confirm",
+    name: "furtherInstallation",
+    message: "Are there any further installation requirements?",
+  },
+];
+
+const questionsUsageRequirements = [
+  {
+    type: "confirm",
+    name: "usage",
+    message: "Are there any usage information?",
+  },
+];
+
+const questionsUsageInfo = [
+  {
+    type: "input",
+    name: "usageInfo",
+    message: "Type your usage information below:",
+  },
+];
+
+const questionsFurtherUsageInfo = [
+  {
+    type: "confirm",
+    name: "furtherUsage",
+    message: "Are there any further usage information?",
+  },];
 
 const generateTitle = (answers) => {
   return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
@@ -98,6 +184,8 @@ const writeToFile = (filePath, data) => {
 
 const init = async () => {
   // prompt the questions using inquirer
+  const data = await inquirerData();
+  
   // generate readme based on answers
   const readme = generateReadme();
 
