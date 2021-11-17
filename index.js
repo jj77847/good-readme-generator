@@ -59,7 +59,7 @@ const generateDescription = (answers) => {
   return `## Description
 
 //   ${answers.description}`;
-// };
+};
 
 const generateInstallation = (answers) => {
   if (answers.installation) {
@@ -147,7 +147,7 @@ const init = async () => {
   console.log(readme);
 
   // write generated readme to a file
-  writeToFile("GENERATED_README.md", readme);
+  writeToFile("GENERATED_README.md", generateReadme);
 };
 
 init();
