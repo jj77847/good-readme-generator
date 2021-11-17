@@ -58,8 +58,8 @@ const generateTableOfContents = (answers) => {
 const generateDescription = (answers) => {
   return `## Description
 
-  ${answers.description}`;
-};
+//   ${answers.description}`;
+// };
 
 const generateInstallation = (answers) => {
   if (answers.installation) {
