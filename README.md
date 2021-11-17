@@ -25,4 +25,8 @@ google link? screenafy?
 
 ## Link to GitHub Repository
 
-https://github.com/jj77847/professional-readme-generator
+https://github.com/jj77847/professional-readme-generator/tree/dev
+
+## Link to Github Page
+
+https://jj77847.github.io/professional-readme-generator/
