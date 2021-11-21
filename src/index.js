@@ -119,8 +119,6 @@ const generateReadme = (answers) => {
 
   ${generateDescription(answers)}
 
-  ${generateTableOfContents(answers)}
-
   ${generateDescription(answers)}
 
   ${generateInstallation(answers)}
