@@ -133,6 +133,79 @@ const generateReadme = (answers) => {
   `;
 };
 
+const loopQuestion = async (question) => {
+  let inProgress = true;
+  const results = [];
+
+  while (inProgress) {
+    const answers = await inquirer.prompt(question);
+    results.push(answers);
+    const { quit } = await inquirer.prompt({
+      type: "confirm",
+      message: "do you want to quit?",
+      name: "quit",
+    });
+
+    if (quit) {
+      inProgress = false;
+    }
+  }
+};
+const getOtherContents = ({ installation, usage, tests }) => {
+  const contents = [];
+
+  if (installation) contents.push("- [Installation](#installation)");
+
+  if (usage) contents.push("- [Usage](#usage)");
+
+  if (tests) contents.push("- [Tests](#tests)");
+
+  return contents;
+};
+
+const generateTableOfContents = (answers) => {
+  const contents = [
+    "- [Description](#description)",
+    ...getOtherContents(answers),
+    "- [Contributing](#contributing)",
+    "- [License](#license)",
+    "- [Question](#question)",
+  ];
+
+  return `## Table of Contents\n
+${contents.join("\n")}
+`;
+};
+
+const inquirer = require("inquirer");
+
+const loopQuestion = async (question) => {
+  let inProgress = true;
+  const results = [];
+
+  while (inProgress) {
+    const answers = await inquirer.prompt(question);
+    results.push(answers);
+    const { quit } = await inquirer.prompt({
+      type: "confirm",
+      message: "do you want to quit?",
+      name: "quit",
+    });
+
+    if (quit) {
+      inProgress = false;
+    }
+  }
+
+  return results;
+};
+
+loopQuestion({
+  type: "input",
+  name: "installationSteps",
+  message: "What are your steps?",
+});
+
 const writeToFile = (filePath, data) => {
   try {
     fs.writeFileSync(filePath, data);
