@@ -1,54 +1,38 @@
-# the ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
+# a ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
 
-  ## Table of Contents
+## Table of Contents
 
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)
+// - [Description](#description)
+// - [Installation](#installation)
+// - [Usage](#usage)
+// - [Tests](#tests)
+// - [Contributing](#contributing)
+// - [License](#license)
 
-  ## Description
+## Description
 
-  the
+c
 
-  ## Table of Contents
+## Usage
 
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)
+To use the application run the following script:
 
-  ## Description
+```
+undefined
+```
 
-  the
+## Tests
 
-  
+To use the application run the following script:
 
-  ## Usage
+```
+undefined
+```
 
-  To use the application run the following script:
+## Contributing
 
-  ```
-  undefined
-  ```
+d
 
-  ## Tests
+## License
 
-  To use the application run the following script:
-
-  ```
-  undefined
-  ```
-
-  ## Contributing
-
-  the
-
-  ## License
-
-  MIT
-  
+MIT
