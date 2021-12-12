@@ -1,45 +1,54 @@
-# Draft Readme ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
 
-  ## Table of Contents
+# Foo
 
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)
-
-  ## Description
-
-  To help Developers make better use of their time.
-
-  ## Description
-
-  To help Developers make better use of their time.
+![MIT license](https://img.shields.io/apm/l/vim-mode)
+  
+## Description
+  
+Bar
+  
+## Table of Contents
+  
+1. [Foo](#foo)
+2. [Description](#description)
+3. [Table of Contents](#table-of-contents)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [License](#license)
+7. [Contributing](#contributing)
+8. [Tests](#tests)
+9. [Questions](#questions)
+  
+## Installation
+  
+```
+npm i
+npm run start
+npm run dev
+```
+  
+## Usage
+  
+- open file
+- run file
+- close file
 
   
-
-  ## Usage
-
-  To use the application run the following script:
-
-  ```
-  undefined
-  ```
-
-  ## Tests
-
-  To use the application run the following script:
-
-  ```
-  undefined
-  ```
-
-  ## Contributing
-
-  By sharing the workload.
-
-  ## License
-
-  MIT
+## License
   
+MIT license
+
+Find out more on: https://opensource.org/licenses/MIT
+  
+## Contributing
+  
+By code
+  
+## Tests
+  
+Nope
+  
+## Questions
+  
+- View my [GitHub](https://github.com/me) profile
+- Email me at me

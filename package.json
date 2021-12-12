@@ -1,23 +1,14 @@
 {
-  "name": "professional-readme-generator",
+  "name": "good-readme-generator",
   "version": "1.0.0",
-  "description": "professional-readme-generator-using-node",
+  "description": "good-readme-generator",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jj77847/professional-readme-generator.git"
-  },
-  "keywords": [],
-  "author": "MIT",
-  "license": "",
-  "bugs": {
-    "url": "https://github.com/jj77847/professional-readme-generator/issues"
-  },
-  "homepage": "https://github.com/jj77847/professional-readme-generator#readme",
+  "author": "Jonathan Jefferies",
+  "license": "MIT",
   "dependencies": {
-    "inquirer": "^8.2.0"
+    "inquirer": "^6.5.2"
   }
 }
