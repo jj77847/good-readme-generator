@@ -24,6 +24,8 @@ node index.js
 
 ## Link to the Demo Video
 
+https://youtu.be/0sOWbX9wO88
+
 ## Link to GitHub Repository
 
 https://github.com/jj77847/good-readme-generator
