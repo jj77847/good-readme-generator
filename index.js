@@ -12,7 +12,7 @@ const questionsBasicProjectInfo = [
   },
   {
     type: "list",
-    choices: ["MIT", "APACHE_2.0", "GPL_3.0", "BSD_3", "None"],
+    choices: ["MIT", "None"],
     name: "license",
     message: "Select a license for your project",
   },

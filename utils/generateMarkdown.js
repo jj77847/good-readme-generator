@@ -2,12 +2,6 @@ const renderLicenseBadge = (license) => {
   switch (license) {
     case "MIT":
       return "https://img.shields.io/apm/l/vim-mode";
-    case "APACHE_2.0":
-      return "https://img.shields.io/crates/l/rustc-serialize/0.3.24";
-    case "GPL_3.0":
-      return "https://img.shields.io/eclipse-marketplace/l/notepad4e?label=GPL%203.0";
-    case "BSD_3":
-      return "https://img.shields.io/pypi/l/Django";
     case "None":
       return "";
   }
@@ -17,12 +11,6 @@ const renderLicenseLink = (license) => {
   switch (license) {
     case "MIT":
       return "\nFind out more on: https://opensource.org/licenses/MIT";
-    case "APACHE_2.0":
-      return "\nFind out more on: https://www.apache.org/licenses/LICENSE-2.0";
-    case "GPL_3.0":
-      return "\nFind out more on: https://www.gnu.org/licenses/gpl-3.0.en.html";
-    case "BSD_3":
-      return "\nFind out more on: https://opensource.org/licenses/BSD-3-Clause";
     case "None":
       return "";
   }
