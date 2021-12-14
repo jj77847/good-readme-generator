@@ -50,5 +50,5 @@ Nope
   
 ## Questions
   
-- View my [GitHub](https://github.com/me) profile
+- View my [GitHub](https://github.com/jj77847) profile
 - Email me at me
