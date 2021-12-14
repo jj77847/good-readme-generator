@@ -1,5 +1,6 @@
 
-# Foo
+# 
+Title
 
 ![MIT license](https://img.shields.io/apm/l/vim-mode)
   
@@ -9,7 +10,7 @@ Bar
   
 ## Table of Contents
   
-1. [Foo](#foo)
+1. [Title](#ftitle)
 2. [Description](#description)
 3. [Table of Contents](#table-of-contents)
 4. [Installation](#installation)
