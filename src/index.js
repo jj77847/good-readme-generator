@@ -70,8 +70,6 @@ const generateLicense = (answers) => {
 const generateReadme = (answers) => {
   return `${generateTitle(answers)}
 
-  ${generateTableOfContents(answers)}
-
   ${generateDescription(answers)}
 
   ${generateInstallation(answers)}
