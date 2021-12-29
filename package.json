@@ -1,16 +1,15 @@
 {
-  "name": "files-folders-structure",
+  "name": "28-Stu_Mini-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "In this activity, you will build a command-line tool that generates an HTML portfolio page from user input.",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.1"
+    "inquirer": "^8.2.0"
   }
 }
