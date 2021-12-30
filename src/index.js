@@ -1,7 +1,105 @@
 // console.log("Hi Jonny you can do this!");
 
-// declare questions
-const questions = [];
+// required packages for readme
+const inquirer = require("inquirer");
+const fs = require("fs");
+
+//declare questions
+const questions = [
+  
+  {
+    type: "input",
+    message: "What is the title of your project?",
+    name: "title",
+  },
+  // Description of the project
+  {
+    type: "input",
+    message: "What is the description of your project?",
+    name: "description",
+  },
+  // Installation Instructions
+  {
+    type: "confirm",
+    message: "Does your project require any installation?",
+    name: "installation",
+  },
+  //installation steps
+  {
+    type: "input",
+    message: "Please add any installation requirements.",
+    name: "installationInformation",
+    when: (answers) => {
+      return answers.installation;
+    },
+  },
+  // Usage Information
+  {
+    type: "confirm",
+    message: "Do you have usages?",
+    name: "usage",
+  },
+  // Usages steps
+  {
+    type: "input",
+    message: "Please input the usages steps:",
+    name: "usageinput",
+    when: (answers) => {
+      return answers.usage;
+    },
+  },
+  // Test Instruction
+  {
+    type: "confirm",
+    message: "Are there any tests for this project?",
+    name: "tests",
+
+  // start test 
+  {
+    type: "input",
+    message: "Input any start test information:",
+    name: "testInput",
+    when: (answers) => {
+      return answers.test;
+    },
+  },
+  // Contribution
+  {
+    type: "input",
+    message: "How can people contribute to this project?",
+    name: "contribution",
+  },
+  // License
+  {
+    type: "list",
+    message: "Choose a license for your project",
+    name: "license",
+    choices: ["MIT", "none",
+  },
+  // Github Username
+  {
+    type: "input",
+    message: "What is your github user name?",
+    name: "github",
+  },
+  // Email Address
+  {
+    type: "input",
+    message: "What is your email address?",
+    name: "email",
+  },
+];
+
+// Create a function to write README file
+const writeToFile = (filePath, data) => {
+  try {
+    fs.writeFileSync(filePath, data);
+    console.log("SUCCESS");
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
 
 // prompt the questions using inquirer
 
