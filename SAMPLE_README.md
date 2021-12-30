@@ -1,4 +1,4 @@
-# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
+# TITLE ![MIT](https://img.shields.io/static/v1?label=${}&message=License&color=green)
 
 ## Table of Contents
 
@@ -20,7 +20,7 @@ ADD TEXT HERE
 Run the following script to install the packages required for the application:
 
 ```
-npm install
+ADD TEXT HERE
 ```
 
 ## Usage
@@ -28,7 +28,7 @@ npm install
 To use the application run the following script:
 
 ```
-npm run start
+ADD TEXT HERE
 ```
 
 ## Tests
