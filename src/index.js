@@ -2,7 +2,6 @@
 
 // required packages for readme
 const inquirer = require("inquirer");
-const fs = require("fs");
 
 //declare questions
 const questions = [
