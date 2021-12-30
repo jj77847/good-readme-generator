@@ -71,51 +71,21 @@ const generateLicense = (answers) => {
 
 const generateReadme = (answers) => {
   return `${generateTitle(answers)}
-  
-  ## Table of Contents
 
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Tests](#tests)
-  - [Contributing](#contributing)
-  - [License](#license)
+  ${generateTableOfContents(answers)}
 
-## Description
+  ${generateDescription(answers)}
 
-ADD TEXT HERE
+  ${generateInstallation(answers)}
 
-## Installation
+  ${generateUsage(answers)}
 
-Run the following script to install the packages required for the application:
+  ${generateTests(answers)}
 
-\`\`\`
-ADD TEXT HERE
-\`\`\`
+  ${generateContributing(answers)}
 
-## Usage
+  ${generateLicense(answers)}
 
-To use the application run the following script:
-
-\`\`\`
-ADD TEXT HERE
-\`\`\`
-
-## Tests
-
-To use the application run the following script:
-
-\`\`\`
-ADD TEXT HERE
-\`\`\`
-
-## Contributing
-
-ADD TEXT HERE
-
-## License
-
-ADD TEXT HERE
 `;
 };
 
