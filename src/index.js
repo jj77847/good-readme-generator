@@ -4,6 +4,8 @@ const fs = require("fs");
 // declare questions
 const questions = [];
 
+// prompt the questions using inquirer
+
 const generateTitle = (answers) => {
   return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
 };
@@ -68,11 +70,10 @@ const generateLicense = (answers) => {
 };
 
 const generateReadme = (answers) => {
-  return `# TITLE ![MIT](https://img.shields.io/static/v1?label=${}&message=License&color=green)
+  return `${generateTitle(answers)}
+  
+  ## Table of Contents
 
-## Table of Contents
-
-  - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -115,7 +116,7 @@ ADD TEXT HERE
 ## License
 
 ADD TEXT HERE
-`
+`;
 };
 
 const writeToFile = (filePath, data) => {
