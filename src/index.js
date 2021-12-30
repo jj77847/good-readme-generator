@@ -1,5 +1,4 @@
 // console.log("Hi Jonny you can do this!");
-const fs = require("fs");
 
 // declare questions
 const questions = [];
