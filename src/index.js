@@ -38,6 +38,15 @@ inquirer.prompt([
     message: "Do you have usages?",
     name: "usage",
   },
+  //Usage steps
+  {
+    type: "input",
+    message: "Please add any useages information.",
+    name: "usagesInformation",
+    when: (answers) => {
+      return answers.usage;
+    },
+  },
 
   // Test Instruction
   {
@@ -178,7 +187,6 @@ const writeToFile = (filePath, data) => {
 };
 
 const init = async () => {
-  // prompt the questions using inquirer
   // generate readme based on answers
   const readme = generateReadme();
 
