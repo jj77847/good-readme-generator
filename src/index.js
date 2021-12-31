@@ -5,7 +5,6 @@ const inquirer = require("inquirer");
 
 //declare questions
 const questions = [
-  
   {
     type: "input",
     message: "What is the title of your project?",
@@ -38,15 +37,17 @@ const questions = [
     message: "Do you have usages?",
     name: "usage",
   },
+
   // Usages steps
   {
     type: "input",
-    message: "Please input the usages steps:",
+    message: "Please input the usages requirements:",
     name: "usageinput",
     when: (answers) => {
       return answers.usage;
     },
   },
+
   // Test Instruction
   {
     type: "confirm",
@@ -62,12 +63,14 @@ const questions = [
       return answers.test;
     },
   },
+
   // Contribution
   {
     type: "input",
     message: "How can people contribute to this project?",
     name: "contribution",
   },
+
   // License
   {
     type: "list",
@@ -75,12 +78,14 @@ const questions = [
     name: "license",
     choices: ["MIT", "none",
   },
+
   // Github Username
   {
     type: "input",
     message: "What is your github user name?",
     name: "github",
   },
+
   // Email Address
   {
     type: "input",
