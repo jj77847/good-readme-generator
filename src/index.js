@@ -53,10 +53,10 @@ const questions = [
     message: "Are there any tests for this project?",
     name: "tests",
 
-  // start test 
+  // Start test 
   {
     type: "input",
-    message: "Input any start test information:",
+    message: "Input any tests requirements:",
     name: "testInput",
     when: (answers) => {
       return answers.test;
