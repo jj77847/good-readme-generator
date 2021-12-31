@@ -1,7 +1,7 @@
 // console.log("Hi Jonny you can do this!");
 
 // required packages for readme
-const inquirer = require("inquirer");
+// prompt the questions using inquirer
 
 const inquirer = require('inquirer');
 
@@ -97,27 +97,16 @@ inquirer
 ];
     
   ])
-  .then((response) =>
-    response.confirm === response.password
+  .then((questions) =>
+    generateReadme.confirm === readme.answers
       ? console.log('Success!')
-      : console.log('You forgot your password already?!')
+      : console.log('try again so close?!')
   );
 
 //declare questions
 const questions = [
 
-
-
-
 // prompt the questions using inquirer
-const inquirerData = async () => {
-  const basicData = await inquirer.prompt(questionsBasicProjectInfo);
-
-  const getInstallationData = async () => {
-    const { installation } = await inquirer.prompt(
-      questionsInstallationRequirements
-    );
-
 
 const generateTitle = (answers) => {
   return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
