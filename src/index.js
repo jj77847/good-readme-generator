@@ -55,9 +55,10 @@ inquirer
     type: "confirm",
     message: "Are there any tests for this project?",
     name: "tests",
+  },
 
   // Start test 
-  {
+    {
     type: "input",
     message: "Input any tests requirements:",
     name: "testInput",
@@ -79,7 +80,7 @@ inquirer
     message: "Choose a license for your project",
     name: "license",
     choices: ["MIT", "none",
-  },
+    ]},
 
   // Github Username
   {
