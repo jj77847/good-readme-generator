@@ -89,17 +89,6 @@ const questions = [
   },
 ];
 
-// Create a function to write README file
-const writeToFile = (filePath, data) => {
-  try {
-    fs.writeFileSync(filePath, data);
-    console.log("SUCCESS");
-  } catch (error) {
-    console.log(error.message);
-  }
-};
-
-
 // prompt the questions using inquirer
 
 const generateTitle = (answers) => {
