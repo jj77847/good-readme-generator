@@ -3,29 +3,28 @@
 // required packages for readme
 // prompt the questions using inquirer
 
-const inquirer = require('inquirer');
+const inquirer = require("inquirer");
 
-inquirer
-  .prompt([
-    {
-      type: "input",
-      message: "What is the title of your project?",
-      name: "title",
-    },
+inquirer.prompt([
+  {
+    type: "input",
+    message: "What is the title of your project?",
+    name: "title",
+  },
   // Description of the project
-    {
+  {
     type: "input",
     message: "What is the description of your project?",
     name: "description",
-    },
+  },
   // Installation Instructions
-    {
+  {
     type: "confirm",
     message: "Does your project require any installation?",
     name: "installation",
-    },
+  },
   //installation steps
-    {
+  {
     type: "input",
     message: "Please add any installation requirements.",
     name: "installationInformation",
@@ -40,16 +39,6 @@ inquirer
     name: "usage",
   },
 
-  // Usages steps
-  {
-    type: "input",
-    message: "Please input the usages requirements:",
-    name: "usageinput",
-    when: (answers) => {
-      return answers.usage;
-    },
-  },
-
   // Test Instruction
   {
     type: "confirm",
@@ -57,8 +46,8 @@ inquirer
     name: "tests",
   },
 
-  // Start tests 
-    {
+  // Start tests
+  {
     type: "input",
     message: "Input any tests requirements:",
     name: "testInput",
@@ -79,8 +68,8 @@ inquirer
     type: "list",
     message: "Choose a license for your project",
     name: "license",
-    choices: ["MIT", "none",
-    ]},
+    choices: ["MIT", "none"],
+  },
 
   // Github Username
   {
@@ -95,19 +84,7 @@ inquirer
     message: "What is your email address?",
     name: "email",
   },
-],
-    
-  ])
-  .then((readme) =>
-    generateReadme.confirm === readme.answers
-      ? console.log('Success!')
-      : console.log('try again so close?!')
-  );
-
-//declare questions
-const questions = [
-
-// prompt the questions using inquirer
+]);
 
 const generateTitle = (answers) => {
   return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
@@ -189,7 +166,7 @@ const generateReadme = (answers) => {
 
   ${generateLicense(answers)}
 
-`;
+  `;
 };
 
 const writeToFile = (filePath, data) => {
