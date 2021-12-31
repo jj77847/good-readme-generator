@@ -1,5 +1,4 @@
 # TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
-
   ## Table of Contents
 
   - [Description](#description)
@@ -11,7 +10,9 @@
 
   ## Description
 
+  ```
   ADD TEXT HERE
+  ```
 
   ## Installation
 
@@ -38,11 +39,15 @@
   ```
 
   ## Contributing
-
+  
+  ```
   ADD TEXT HERE
+  ```
 
   ## License
 
+  ```
   ADD TEXT HERE
+  ```
 
   
