@@ -1,5 +1,3 @@
-// console.log("Hi Jonny you can do this!");
-
 // required packages for readme
 // prompt the questions using inquirer
 const fs = require("fs");
@@ -195,3 +193,5 @@ const init = async () => {
 };
 
 init();
+
+console.log("Hi Jonny you can do this!");
