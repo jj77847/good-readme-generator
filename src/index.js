@@ -57,7 +57,7 @@ inquirer
     name: "tests",
   },
 
-  // Start test 
+  // Start tests 
     {
     type: "input",
     message: "Input any tests requirements:",
@@ -95,10 +95,10 @@ inquirer
     message: "What is your email address?",
     name: "email",
   },
-];
+],
     
   ])
-  .then((questions) =>
+  .then((readme) =>
     generateReadme.confirm === readme.answers
       ? console.log('Success!')
       : console.log('try again so close?!')
