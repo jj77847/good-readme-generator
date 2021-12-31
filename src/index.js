@@ -1,3 +1,5 @@
+console.log("Hi Jonny you can do this!");
+
 // required packages for readme
 // prompt the questions using inquirer
 const fs = require("fs");
@@ -8,6 +10,13 @@ inquirer.prompt([
     type: "input",
     message: "What is the title of your project?",
     name: "title",
+  },
+  // License
+  {
+    type: "list",
+    message: "Choose a license for your project",
+    name: "license",
+    choices: ["MIT", "none"],
   },
   // Description of the project
   {
@@ -95,20 +104,19 @@ inquirer.prompt([
 
 const generateReadme = (answers) => {
   return `${generateTitle(answers)}
+  ${generateTableOfContents(answers)}
 
-    ${generateTableOfContents(answers)}
+  ${generateDescription(answers)}
 
-    ${generateDescription(answers)}
+  ${generateInstallation(answers)}
 
-    ${generateInstallation(answers)}
+  ${generateUsage(answers)}
 
-    ${generateUsage(answers)}
+  ${generateTests(answers)}
 
-    ${generateTests(answers)}
+  ${generateContributing(answers)}
 
-    ${generateContributing(answers)}
-
-    ${generateLicense(answers)}
+  ${generateLicense(answers)}
 
   `;
 };
@@ -131,7 +139,9 @@ const generateTableOfContents = (answers) => {
 const generateDescription = (answers) => {
   return `## Description
 
-  ADD TEXT HERE`;
+  \`\`\`
+  ADD TEXT HERE
+  \`\`\``;
 };
 
 const generateInstallation = (answers) => {
@@ -166,14 +176,18 @@ const generateTests = (answers) => {
 
 const generateContributing = (answers) => {
   return `## Contributing
-
-  ADD TEXT HERE`;
+  
+  \`\`\`
+  ADD TEXT HERE
+  \`\`\``;
 };
 
 const generateLicense = (answers) => {
   return `## License
 
-  ADD TEXT HERE`;
+  \`\`\`
+  ADD TEXT HERE
+  \`\`\``;
 };
 
 const writeToFile = (filePath, data) => {
@@ -193,5 +207,3 @@ const init = async () => {
 };
 
 init();
-
-console.log("Hi Jonny you can do this!");
