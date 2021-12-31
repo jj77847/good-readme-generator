@@ -2,7 +2,7 @@
 
 // required packages for readme
 // prompt the questions using inquirer
-
+const fs = require("fs");
 const inquirer = require("inquirer");
 
 inquirer.prompt([
