@@ -41,7 +41,7 @@ inquirer.prompt([
   //Usage steps
   {
     type: "input",
-    message: "Please add any useages information.",
+    message: "Please add any additional information.",
     name: "usagesInformation",
     when: (answers) => {
       return answers.usage;
@@ -95,9 +95,29 @@ inquirer.prompt([
   },
 ]);
 
-const generateTitle = (answers) => {
-  return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+const generateReadme = (answers) => {
+  return `${generateTitle(answers)}
+
+    ${generateTableOfContents(answers)}
+
+    ${generateDescription(answers)}
+
+    ${generateInstallation(answers)}
+
+    ${generateUsage(answers)}
+
+    ${generateTests(answers)}
+
+    ${generateContributing(answers)}
+
+    ${generateLicense(answers)}
+
+  `;
 };
+
+function generateTitle(answers) {
+  return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+}
 
 const generateTableOfContents = (answers) => {
   return `## Table of Contents
@@ -156,26 +176,6 @@ const generateLicense = (answers) => {
   return `## License
 
   ADD TEXT HERE`;
-};
-
-const generateReadme = (answers) => {
-  return `${generateTitle(answers)}
-
-  ${generateTableOfContents(answers)}
-
-  ${generateDescription(answers)}
-
-  ${generateInstallation(answers)}
-
-  ${generateUsage(answers)}
-
-  ${generateTests(answers)}
-
-  ${generateContributing(answers)}
-
-  ${generateLicense(answers)}
-
-  `;
 };
 
 const writeToFile = (filePath, data) => {
