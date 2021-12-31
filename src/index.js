@@ -3,27 +3,29 @@
 // required packages for readme
 const inquirer = require("inquirer");
 
-//declare questions
-const questions = [
-  {
-    type: "input",
-    message: "What is the title of your project?",
-    name: "title",
-  },
+const inquirer = require('inquirer');
+
+inquirer
+  .prompt([
+    {
+      type: "input",
+      message: "What is the title of your project?",
+      name: "title",
+    },
   // Description of the project
-  {
+    {
     type: "input",
     message: "What is the description of your project?",
     name: "description",
-  },
+    },
   // Installation Instructions
-  {
+    {
     type: "confirm",
     message: "Does your project require any installation?",
     name: "installation",
-  },
+    },
   //installation steps
-  {
+    {
     type: "input",
     message: "Please add any installation requirements.",
     name: "installationInformation",
@@ -93,8 +95,29 @@ const questions = [
     name: "email",
   },
 ];
+    
+  ])
+  .then((response) =>
+    response.confirm === response.password
+      ? console.log('Success!')
+      : console.log('You forgot your password already?!')
+  );
+
+//declare questions
+const questions = [
+
+
+
 
 // prompt the questions using inquirer
+const inquirerData = async () => {
+  const basicData = await inquirer.prompt(questionsBasicProjectInfo);
+
+  const getInstallationData = async () => {
+    const { installation } = await inquirer.prompt(
+      questionsInstallationRequirements
+    );
+
 
 const generateTitle = (answers) => {
   return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
