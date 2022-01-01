@@ -173,20 +173,41 @@ const generateLicense = (answers) => {
 
 const generateReadme = (answers) => {
   return `${generateTitle(answers)}
+  `;
+};
 
-  ${generateTableOfContents(answers)}
-  
-  ${generateDescription(answers)}
-  
-  ${generateInstallation(answers)}
-  
-  ${generateUsage(answers)}
-  
-  ${generateTests(answers)}
-  
-  ${generateContributing(answers)}
-  
-  ${generateLicense(answers)}
+const generateReadme = (answers) => {
+  return `${generateTableOfContents(answers)}
+  `;
+};
+
+const generateReadme = (answers) => {
+  return `${generateDescription(answers)}
+  `;
+};
+
+const generateReadme = (answers) => {
+  return `${generateInstallation(answers)}
+  `;
+};
+
+const generateReadme = (answers) => {
+  return `${generateUsage(answers)}
+  `;
+};
+
+const generateReadme = (answers) => {
+  return `${generateTests(answers)}
+  `;
+};
+
+const generateReadme = (answers) => {
+  return `${generateContributing(answers)}
+  `;
+};
+
+const generateReadme = (answers) => {
+  return `${generateLicense(answers)}
   `;
 };
 
