@@ -120,9 +120,9 @@ const generateTableOfContents = (answers) => {
 const generateDescription = (answers) => {
   return `## Description
 
-  \`\`\`
-  ADD TEXT HERE
-  \`\`\``,
+\`\`\`
+${data.generateDescription}
+\`\`\``,
 };
 
 const generateInstallation = (answers) => {
@@ -131,7 +131,7 @@ const generateInstallation = (answers) => {
   Run the following script to install the packages required for the application:
 
   \`\`\`
-  ADD TEXT HERE
+  ${data.generateInstallation}
   \`\`\``,
 };
 
@@ -141,7 +141,7 @@ const generateUsage = (answers) => {
   To use the application run the following script:
 
   \`\`\`
-  ADD TEXT HERE
+  ${data.generateUsage}
   \`\`\``,
 };
 
@@ -151,7 +151,7 @@ const generateTests = (answers) => {
   To use the application run the following script:
 
   \`\`\`
-  ADD TEXT HERE
+  ${data.generateTableOfContents}
   \`\`\``,
 };
 
@@ -159,7 +159,7 @@ const generateContributing = (answers) => {
   return `## Contributing
   
   \`\`\`
-  ADD TEXT HERE
+  ${data.generateContributing}
   \`\`\``,
 };
 
