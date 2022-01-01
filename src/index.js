@@ -164,7 +164,7 @@ const generateContributing = (answers) => {
 const generateLicense = (answers) => {
   return `## License
   
-  ADD TEXT HERE`;
+  `;
 };
 
 const generateReadme = (answers) => {
