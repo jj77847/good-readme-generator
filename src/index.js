@@ -6,6 +6,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 // declare questions
+
 inquirer.prompt([
   {
     type: "input",
@@ -130,7 +131,7 @@ const generateInstallation = (answers) => {
   Run the following script to install the packages required for the application:
   
   \`\`\`
-  ADD TEXT HERE
+  npm install inquirer
   \`\`\``;
 };
 
@@ -140,7 +141,7 @@ const generateUsage = (answers) => {
   To use the application run the following script:
   
   \`\`\`
-  ADD TEXT HERE
+  npm run start
   \`\`\``;
 };
 
@@ -150,7 +151,7 @@ const generateTests = (answers) => {
   To use the application run the following script:
   
   \`\`\`
-  ADD TEXT HERE
+  npm run tests
   \`\`\``;
 };
 
@@ -195,6 +196,7 @@ const writeToFile = (filePath, data) => {
 
 const init = async () => {
   // prompt the questions using inquirer
+
   // generate readme based on answers
   const readme = generateReadme();
 

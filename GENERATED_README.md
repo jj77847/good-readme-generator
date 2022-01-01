@@ -18,7 +18,7 @@
   Run the following script to install the packages required for the application:
   
   ```
-  ADD TEXT HERE
+  npm install inquirer
   ```
   
   ## Usage
@@ -26,7 +26,7 @@
   To use the application run the following script:
   
   ```
-  ADD TEXT HERE
+  npm run start
   ```
   
   ## Tests
@@ -34,7 +34,7 @@
   To use the application run the following script:
   
   ```
-  ADD TEXT HERE
+  npm run tests
   ```
   
   ## Contributing
