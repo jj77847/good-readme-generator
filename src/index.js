@@ -1,4 +1,4 @@
-console.log("Hi Jonny you can do this!");
+// console.log("Hi Jonny you can do this!");
 
 // required packages for readme
 // prompt the questions using inquirer
@@ -6,8 +6,6 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 
 // declare questions
-const questions = [];
-
 inquirer.prompt([
   {
     type: "input",
@@ -105,13 +103,13 @@ inquirer.prompt([
   },
 ]);
 
-const generateReadme = (answers) => {
-  return `#TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
+const generateTitle = (answers) => {
+  return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
 };
 
 const generateTableOfContents = (answers) => {
-  return `##Table of Contents 
-
+  return `## Table of Contents
+  
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -122,16 +120,15 @@ const generateTableOfContents = (answers) => {
 
 const generateDescription = (answers) => {
   return `## Description
-
-  ADD TEXT HERE
-  `;
+  
+  ADD TEXT HERE`;
 };
 
 const generateInstallation = (answers) => {
   return `## Installation
-
+  
   Run the following script to install the packages required for the application:
-
+  
   \`\`\`
   ADD TEXT HERE
   \`\`\``;
@@ -139,9 +136,9 @@ const generateInstallation = (answers) => {
 
 const generateUsage = (answers) => {
   return `## Usage
-
+  
   To use the application run the following script:
-
+  
   \`\`\`
   ADD TEXT HERE
   \`\`\``;
@@ -149,9 +146,9 @@ const generateUsage = (answers) => {
 
 const generateTests = (answers) => {
   return `## Tests
-
+  
   To use the application run the following script:
-
+  
   \`\`\`
   ADD TEXT HERE
   \`\`\``;
@@ -160,15 +157,13 @@ const generateTests = (answers) => {
 const generateContributing = (answers) => {
   return `## Contributing
   
-  ADD TEXT HERE
-  `;
+  ADD TEXT HERE`;
 };
 
 const generateLicense = (answers) => {
   return `## License
-
-  ADD TEXT HERE
-  `;
+  
+  ADD TEXT HERE`;
 };
 
 const generateReadme = (answers) => {
@@ -188,7 +183,6 @@ const generateReadme = (answers) => {
   
   ${generateLicense(answers)}
   `;
-};
 };
 
 const writeToFile = (filePath, data) => {
