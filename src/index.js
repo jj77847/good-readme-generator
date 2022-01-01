@@ -5,6 +5,9 @@ console.log("Hi Jonny you can do this!");
 const fs = require("fs");
 const inquirer = require("inquirer");
 
+// declare questions
+const questions = [];
+
 inquirer.prompt([
   {
     type: "input",
@@ -120,9 +123,8 @@ const generateTableOfContents = (answers) => {
 const generateDescription = (answers) => {
   return `## Description
 
-\`\`\`
-${data.generateDescription}
-\`\`\``;
+  ADD TEXT HERE
+  `;
 };
 
 const generateInstallation = (answers) => {
@@ -131,7 +133,7 @@ const generateInstallation = (answers) => {
   Run the following script to install the packages required for the application:
 
   \`\`\`
-  ${data.generateInstallation}
+  ADD TEXT HERE
   \`\`\``;
 };
 
@@ -141,7 +143,7 @@ const generateUsage = (answers) => {
   To use the application run the following script:
 
   \`\`\`
-  ${data.generateUsage}
+  ADD TEXT HERE
   \`\`\``;
 };
 
@@ -151,24 +153,41 @@ const generateTests = (answers) => {
   To use the application run the following script:
 
   \`\`\`
-  ${data.generateTableOfContents}
+  ADD TEXT HERE
   \`\`\``;
 };
 
 const generateContributing = (answers) => {
   return `## Contributing
   
-  \`\`\`
-  ${data.generateContributing}
-  \`\`\``;
+  ADD TEXT HERE
+  `;
 };
 
 const generateLicense = (answers) => {
   return `## License
 
-  \`\`\`
   ADD TEXT HERE
-  \`\`\``;
+  `;
+};
+
+const generateReadme = (answers) => {
+  return `${generateTitle(answers)}
+
+  ${generateTableOfContents(answers)}
+  
+  ${generateDescription(answers)}
+  
+  ${generateInstallation(answers)}
+  
+  ${generateUsage(answers)}
+  
+  ${generateTests(answers)}
+  
+  ${generateContributing(answers)}
+  
+  ${generateLicense(answers)}
+  `;
 };
 
 const writeToFile = (filePath, data) => {
