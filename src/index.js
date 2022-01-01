@@ -114,7 +114,7 @@ const generateTableOfContents = (answers) => {
   - [Usage](#usage)
   - [Tests](#tests)
   - [Contributing](#contributing)
-  - [License](#license)`,
+  - [License](#license)`;
 };
 
 const generateDescription = (answers) => {
@@ -122,7 +122,7 @@ const generateDescription = (answers) => {
 
 \`\`\`
 ${data.generateDescription}
-\`\`\``,
+\`\`\``;
 };
 
 const generateInstallation = (answers) => {
@@ -132,7 +132,7 @@ const generateInstallation = (answers) => {
 
   \`\`\`
   ${data.generateInstallation}
-  \`\`\``,
+  \`\`\``;
 };
 
 const generateUsage = (answers) => {
@@ -142,7 +142,7 @@ const generateUsage = (answers) => {
 
   \`\`\`
   ${data.generateUsage}
-  \`\`\``,
+  \`\`\``;
 };
 
 const generateTests = (answers) => {
@@ -152,7 +152,7 @@ const generateTests = (answers) => {
 
   \`\`\`
   ${data.generateTableOfContents}
-  \`\`\``,
+  \`\`\``;
 };
 
 const generateContributing = (answers) => {
@@ -160,7 +160,7 @@ const generateContributing = (answers) => {
   
   \`\`\`
   ${data.generateContributing}
-  \`\`\``,
+  \`\`\``;
 };
 
 const generateLicense = (answers) => {
@@ -168,7 +168,7 @@ const generateLicense = (answers) => {
 
   \`\`\`
   ADD TEXT HERE
-  \`\`\``,
+  \`\`\``;
 };
 
 const writeToFile = (filePath, data) => {
