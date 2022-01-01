@@ -103,27 +103,8 @@ inquirer.prompt([
 ]);
 
 const generateReadme = (answers) => {
-  return `${generateTitle(answers)}
-  ${generateTableOfContents(answers)}
-
-  ${generateDescription(answers)}
-
-  ${generateInstallation(answers)}
-
-  ${generateUsage(answers)}
-
-  ${generateTests(answers)}
-
-  ${generateContributing(answers)}
-
-  ${generateLicense(answers)}
-
-  `;
+  return `#TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
 };
-
-function generateTitle(answers) {
-  return `# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)`;
-}
 
 const generateTableOfContents = (answers) => {
   return `## Table of Contents

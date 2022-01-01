@@ -1,6 +1,9 @@
-# TITLE ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
-  ## Table of Contents
+# Example Title ![MIT](https://img.shields.io/static/v1?label=MIT&message=License&color=green)
 
+## Table of Contents
+
+- [Example Title !MIT](#example-title-)
+  - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -8,46 +11,44 @@
   - [Contributing](#contributing)
   - [License](#license)
 
-  ## Description
+## Description
 
-  ```
-  ADD TEXT HERE
-  ```
+```
+good readme generator
+```
 
-  ## Installation
+## Installation
 
-  Run the following script to install the packages required for the application:
+Run the following script to install the packages required for the application:
 
-  ```
-  ADD TEXT HERE
-  ```
+```
+npm i inquirer
+```
 
-  ## Usage
+## Usage
 
-  To use the application run the following script:
+To use the application run the following script:
 
-  ```
-  ADD TEXT HERE
-  ```
+```
+npm run start
+```
 
-  ## Tests
+## Tests
 
-  To use the application run the following script:
+To use the application run the following script:
 
-  ```
-  ADD TEXT HERE
-  ```
+```
+none
+```
 
-  ## Contributing
-  
-  ```
-  ADD TEXT HERE
-  ```
+## Contributing
 
-  ## License
+```
+submit a pull request
+```
 
-  ```
-  ADD TEXT HERE
-  ```
+## License
 
-  
+```
+MIT
+```
