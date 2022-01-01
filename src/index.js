@@ -171,44 +171,24 @@ const generateLicense = (answers) => {
   `;
 };
 
-const generateTitle = (answers) => {
+const generateReadme = (answers) => {
   return `${generateTitle(answers)}
+
+  ${generateTableOfContents(answers)}
+  
+  ${generateDescription(answers)}
+  
+  ${generateInstallation(answers)}
+  
+  ${generateUsage(answers)}
+  
+  ${generateTests(answers)}
+  
+  ${generateContributing(answers)}
+  
+  ${generateLicense(answers)}
   `;
 };
-
-const generateTableOfContents = (answers) => {
-  return `${generateTableOfContents(answers)}
-  `;
-};
-
-const generateDescription = (answers) => {
-  return `${generateDescription(answers)}
-  `;
-};
-
-const generateInstallation = (answers) => {
-  return `${generateInstallation(answers)}
-  `;
-};
-
-const generateUsage = (answers) => {
-  return `${generateUsage(answers)}
-  `;
-};
-
-const generateTests = (answers) => {
-  return `${generateTests(answers)}
-  `;
-};
-
-const generateContributing = (answers) => {
-  return `${generateContributing(answers)}
-  `;
-};
-
-const generateLicense = (answers) => {
-  return `${generateLicense(answers)}
-  `;
 };
 
 const writeToFile = (filePath, data) => {
@@ -220,8 +200,9 @@ const writeToFile = (filePath, data) => {
 };
 
 const init = async () => {
+  // prompt the questions using inquirer
   // generate readme based on answers
-  const readme = generateReadme(answers);
+  const readme = generateReadme();
 
   // write generated readme to a file
   writeToFile("GENERATED_README.md", readme);
